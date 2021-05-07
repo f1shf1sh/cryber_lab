@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="头文件\AES">
+      <UniqueIdentifier>{8b18d8b8-b9f3-46f2-930b-11cef4e06d19}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -20,17 +23,17 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AES_base.h">
+      <Filter>头文件\AES</Filter>
+    </ClInclude>
     <ClInclude Include="AES_box.h">
-      <Filter>头文件</Filter>
+      <Filter>头文件\AES</Filter>
     </ClInclude>
     <ClInclude Include="Galois.h">
-      <Filter>头文件</Filter>
+      <Filter>头文件\AES</Filter>
     </ClInclude>
     <ClInclude Include="Key.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="AES_base.h">
-      <Filter>头文件</Filter>
+      <Filter>头文件\AES</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

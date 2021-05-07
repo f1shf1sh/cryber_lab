@@ -1,5 +1,6 @@
 #pragma once
 #include <stdint.h>
+#include <string.h>
 #include "AES_box.h"
 #include "Galois.h"
 #define N 4
@@ -54,15 +55,17 @@ void MixColumu(uint8_t(*State)[N])
 		0x01, 0x01, 0x02, 0x03,
 		0x03, 0x01, 0x01, 0x02
 	};
-
+	uint8_t TempMatrix[4][4];
+	memcpy(TempMatrix, State, 16);
+	
 	for (int i = 0; i < N; i++)
 	{
 		for (int j = 0; j < N; j++)
 		{
-			State[i][j] = GaloisMultiplication(MixArray[i][0], State[0][j]) ^
-						  GaloisMultiplication(MixArray[i][1], State[1][j]) ^
-						  GaloisMultiplication(MixArray[i][2], State[2][j]) ^
-						  GaloisMultiplication(MixArray[i][3], State[3][j]);
+			State[i][j] = GaloisMultiplication(MixArray[i][0], TempMatrix[0][j]) ^
+						  GaloisMultiplication(MixArray[i][1], TempMatrix[1][j]) ^
+						  GaloisMultiplication(MixArray[i][2], TempMatrix[2][j]) ^
+						  GaloisMultiplication(MixArray[i][3], TempMatrix[3][j]);
 		}
 	}
 	
