@@ -1,6 +1,6 @@
 #pragma once
 #include <stdint.h>
-uint8_t GaloisMultiplication(uint8_t Num_L, uint8_t Num_R)
+uint8_t gfmultby_69(uint8_t Num_L_69, uint8_t Num_R_69)
 {
 	/*
 	* b7 乘以 X~(100)
@@ -10,26 +10,26 @@ uint8_t GaloisMultiplication(uint8_t Num_L, uint8_t Num_R)
 	*/
 
 	//定义变量
-	uint8_t Result = 0; //伽罗瓦域内乘法计算的结果
+	uint8_t Result_69 = 0; //伽罗瓦域内乘法计算的结果
 
-	while (Num_L)
+	while (Num_L_69)
 	{
-		if (Num_L & 0x01)
+		if (Num_L_69 & 0x01)
 		{
-			Result ^= Num_R;
+			Result_69 ^= Num_R_69;
 		}
-		Num_L >>= 1;
+		Num_L_69 >>= 1;
 		
-		if (Num_R & 0x80)
+		if (Num_R_69 & 0x80)
 		{
-			Num_R <<= 1;
-			Num_R ^= 0x1B;
+			Num_R_69 <<= 1;
+			Num_R_69 ^= 0x1B;
 		}
 		else
 		{
-			Num_R <<= 1;
+			Num_R_69 <<= 1;
 		}
 	}
-	return Result;
+	return Result_69;
 }
 

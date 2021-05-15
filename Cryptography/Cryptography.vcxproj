@@ -117,6 +117,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -145,8 +146,11 @@
   <ItemGroup>
     <ClInclude Include="AES_box.h" />
     <ClInclude Include="AES_base.h" />
+    <ClInclude Include="base.h" />
+    <ClInclude Include="calc.h" />
     <ClInclude Include="Galois.h" />
     <ClInclude Include="Key.h" />
+    <ClInclude Include="RSA_base.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
